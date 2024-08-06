@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CRUD Application</h1>
+
+    <!-- Form to Add Item -->
+    <form action="/add" method="post">
+      <input type="text" name="item" required placeholder="Enter new item">
+      <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Item List -->
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% items.forEach((item, index) => { %>
+          <tr>
+            <td><%= item %></td>
+            <td>
+              <!-- Form to Edit Item -->
+              <form action="/edit/<%= index %>" method="get" style="display:inline;">
+                <button type="submit">Edit</button>
+              </form>
+              
+              <!-- Form to Delete Item -->
+              <form action="/delete" method="post" style="display:inline;">
+                <input type="hidden" name="index" value="<%= index %>">
+                <button type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "88",
+  "version": "0.0.1",
+  "description": "a powerful nodejs module, we called the luck number 88",
+  "main": "b.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andyliu/hi-npm"
+  },
+  "keywords": [
+    "88"
+  ],
+  "author": "Andyliu",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/andyliu/hi-npm/issues"
+  }
+}
